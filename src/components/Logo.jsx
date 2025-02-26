@@ -25,7 +25,7 @@ const Logo = () => {
         clearInterval(intervalRef.current);
         setAnimating(false);
       }
-    }, 80);
+    }, 60);
   };
 
   const handleMouseLeave = () => {

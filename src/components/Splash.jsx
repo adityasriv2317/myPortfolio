@@ -36,7 +36,7 @@ const Splash = ({ onFinish }) => {
             }, 80 + i * 100);
           }
         }, 1100);
-      },);
+      });
     };
 
     handleAnimation();
@@ -71,9 +71,10 @@ const Splash = ({ onFinish }) => {
         {/* background slices */}
         <div className="w-screen h-screen bg-transparent relative gap-0 flex top-0 left-0 z-[41]">
           <div className="slice"></div>
-          <div className="slice md:block hidden"></div>
           <div className="slice"></div>
-          <div className="slice md:block hidden"></div>
+          <div className="slice"></div>
+          <div className="slice"></div>
+          <div className="slice"></div>
           <div className="slice"></div>
         </div>
       </div>

@@ -1,24 +1,23 @@
 import React, { createContext, useContext, useState } from 'react';
 
-// Create a context for dark mode
-const DarkModeContext = createContext();
+// context for web page properties
+const WebContext = createContext();
 
 // Create a provider component
-export const DarkModeProvider = ({ children }) => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+export const WebProvider = ({ children }) => {
+    const [darkMode, setDarkMode] = useState(false);
+    const [currentPage, setCurrentPage] = useState(0);
 
     const toggleDarkMode = () => {
-        setIsDarkMode(prevMode => !prevMode);
-    };
+        setDarkMode((prev) => !prev);
+    }
 
     return (
-        <DarkModeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
+        <WebContext.Provider value={{ darkMode, setDarkMode, currentPage, setCurrentPage, toggleDarkMode }}>
             {children}
-        </DarkModeContext.Provider>
+        </WebContext.Provider>
     );
 };
 
-// Custom hook for using dark mode context
-export const useDarkMode = () => {
-    return useContext(DarkModeContext);
-};
+// custom hook to use the context
+export const useWebContext = () => useContext(WebContext);
