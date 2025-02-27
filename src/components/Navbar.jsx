@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Logo from "./Logo";
 
-import { useWebContext } from "../Webcontext";
+import useWebContext from "../WebContext";
 
 // navbar component
 const Navbar = () => {
   const [linkon, setLinkon] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const { currentPage, setCurrentPage } = useWebContext();
 
   useEffect(() => {
     const line = document.querySelector(".line");
@@ -26,6 +28,30 @@ const Navbar = () => {
       line.style.boxShadow = "0px 0px 10px white";
     }
   }, [linkon]);
+
+  useEffect(() => {
+    const indLine = document.querySelectorAll(".indLine");
+    const indTxt = document.querySelectorAll(".indTxt");
+
+    if (!indLine || !indTxt) return;
+
+    indLine.forEach((line) => {
+      line.style.width = "20px";
+      line.style.background = "gray";
+      line.style.boxShadow = "none";
+    });
+
+    indTxt.forEach((txt) => {
+      txt.style.color = "gray";
+      txt.style.textShadow = "none";
+    });
+
+    indLine[currentPage].style.width = "50px";
+    indLine[currentPage].style.background = "white";
+    indLine[currentPage].style.boxShadow = "0px 0px 10px rgba(255,255,255,0.5)";
+    indTxt[currentPage].style.color = "white";
+    indTxt[currentPage].style.textShadow = "0px 0px 10px rgba(255,255,255,0.5)";
+  }, [currentPage]);
 
   return (
     <div className="h-full flex flex-col justify-between text-white mb-2">
@@ -72,58 +98,48 @@ const Navbar = () => {
       </div>
       <div>
         {/* navigation links for about, skills, projects and contacts*/}
-        <div className="hidden md:flex uppercase text-md  text-gray-400 font-mono flex-col mt-3">
-          <div className="flex flex-row items-center">
-            <div className="line bg-gray-400 w-[20px] h-[2px] my-auto"></div>
-            <a
-              href="#about"
-              className="px-3 py-1 rounded-sm"
-              onMouseEnter={() => setLinkon(1)}
-              onMouseLeave={() => setLinkon(0)}
-
-              onClick={() => {
-                setCurrentPage(0);
-              }}
-            >
+        <div className="hidden md:flex uppercase text-md text-gray-400 font-mono flex-col mt-3">
+          <div
+            className="flex flex-row items-center"
+            onClick={() => {
+              setCurrentPage(0);
+            }}
+          >
+            <div className="line indLine bg-gray-400 h-[2px] my-auto"></div>
+            <a href="#about" className="px-3 py-1 indTxt rounded-sm">
               About
             </a>
           </div>
-          <div className="flex flex-row items-center">
-            <div className="line bg-gray-400 w-[20px] h-[2px] my-auto"></div>
-            <a
-              href="#about"
-              className="px-3 py-1 rounded-sm"
-              
-              onClick={() => {
-                setCurrentPage(1);
-              }}
-            >
+          <div
+            className="flex flex-row items-center"
+            onClick={() => {
+              setCurrentPage(1);
+            }}
+          >
+            <div className="line indLine bg-gray-400 h-[2px] my-auto"></div>
+            <a href="#about" className="px-3 py-1 indTxt rounded-sm">
               skills and tools
             </a>
           </div>
-          <div className="flex flex-row items-center">
-            <div className="line bg-gray-400 w-[20px] h-[2px] my-auto"></div>
-            <a
-              href="#about"
-              className="px-3 py-1 rounded-sm"
-              
-              onClick={() => {
-                setCurrentPage(2);
-              }}
-            >
-              projects
+          <div
+            className="flex flex-row items-center"
+            onClick={() => {
+              setCurrentPage(2);
+            }}
+          >
+            <div className="line indLine bg-gray-400 h-[2px] my-auto"></div>
+            <a href="#about" className="px-3 py-1 indTxt rounded-sm">
+              my projects
             </a>
           </div>
-          <div className="flex flex-row items-center">
-            <div className="line bg-gray-400 w-[20px] h-[2px] my-auto"></div>
-            <a
-              href="#about"
-              className="px-3 py-1 rounded-sm"
-              
-              onClick={() => {
-                setCurrentPage(3);
-              }}
-            >
+          <div
+            className="flex flex-row items-center"
+            onClick={() => {
+              setCurrentPage(3);
+            }}
+          >
+            <div className="line indLine bg-gray-400 h-[2px] my-auto"></div>
+            <a href="#about" className="px-3 py-1 indTxt rounded-sm">
               contact
             </a>
           </div>
@@ -150,9 +166,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* navigation menu */}
+      {/* navigation menu button*/}
       <div
-        className="md:hidden fixed top-12 right-12 flex flex-col items-center gap-3 text-xl"
+        className="md:hidden fixed top-12 right-12 flex flex-col items-center gap-2 text-xl"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <div className="line bg-white w-[20px] h-[2px]"></div>

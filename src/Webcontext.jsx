@@ -20,4 +20,5 @@ export const WebProvider = ({ children }) => {
 };
 
 // custom hook to use the context
-export const useWebContext = () => useContext(WebContext);
+const useWebContext = () => useContext(WebContext);
+export default useWebContext;
