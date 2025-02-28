@@ -11,11 +11,29 @@ import { WebProvider } from "./Webcontext";
 import Cursor from "./components/Cursor";
 
 const App = () => {
+
+  // Ripple effect
+  document.addEventListener("click", (e) => {
+    const ripple = document.createElement("span");
+    ripple.classList.add("ripple");
+
+    // Set position based on click
+    ripple.style.left = `${e.clientX - 5}px`;
+    ripple.style.top = `${e.clientY - 5}px`;
+
+    document.body.appendChild(ripple);
+
+    // Remove ripple after animation ends
+    setTimeout(() => {
+      ripple.remove();
+    }, 600);
+  });
+
   return (
-    <div className="bg-[rgb(15,23,45)]">
+    <div className="bg-[rgb(10,29,74)]">
       <WebProvider>
         <BrowserRouter>
-        <Cursor />
+          <Cursor />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/test" element={<Splash />} />

@@ -79,7 +79,7 @@ const Splash = ({ onFinish }) => {
         </div>
 
         {/* background slices */}
-        <div className="w-screen h-screen bg-transparent relative gap-0 flex top-0 left-0 z-[42]">
+        <div className="w-screen h-screen bg-transparent relative flex top-0 left-0 z-[42]">
           <div className="slice"></div>
           <div className="slice"></div>
           <div className="slice"></div>
@@ -88,7 +88,7 @@ const Splash = ({ onFinish }) => {
           <div className="slice"></div>
         </div>
 
-        <div className="w-screen h-screen bg-transparent relative gap-0 flex top-0 left-0 z-[40]">
+        <div className="w-screen h-screen bg-transparent relative gap flex top-0 left-0 z-[40]">
           <div className="slice1"></div>
           <div className="slice1"></div>
           <div className="slice1"></div>

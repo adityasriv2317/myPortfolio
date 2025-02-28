@@ -117,7 +117,7 @@ const Navbar = () => {
             }}
           >
             <div className="line indLine bg-gray-400 h-[2px] my-auto"></div>
-            <a href="#about" className="px-3 py-1 indTxt rounded-sm">
+            <a href="#skills" className="px-3 py-1 indTxt rounded-sm">
               skills and tools
             </a>
           </div>
@@ -128,7 +128,7 @@ const Navbar = () => {
             }}
           >
             <div className="line indLine bg-gray-400 h-[2px] my-auto"></div>
-            <a href="#about" className="px-3 py-1 indTxt rounded-sm">
+            <a href="#projects" className="px-3 py-1 indTxt rounded-sm">
               my projects
             </a>
           </div>
@@ -139,7 +139,7 @@ const Navbar = () => {
             }}
           >
             <div className="line indLine bg-gray-400 h-[2px] my-auto"></div>
-            <a href="#about" className="px-3 py-1 indTxt rounded-sm">
+            <a href="#contact" className="px-3 py-1 indTxt rounded-sm">
               contact
             </a>
           </div>
