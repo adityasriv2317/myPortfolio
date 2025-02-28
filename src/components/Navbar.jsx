@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import Logo from "./Logo";
 
 import useWebContext from "./WebContext";
+import resume from "../assets/AdityaResume.pdf";
 
 // navbar component
 const Navbar = () => {
@@ -148,7 +149,7 @@ const Navbar = () => {
         {/* mail and resume */}
         <div className="hidden md:flex flex-row items-center gap-3 text-xl mt-3">
           <a
-            href="/resume.pdf"
+            href={resume}
             className="hover:bg-[rgba(255,255,255,0.5)] border border-transparent hover:border-[rgba(255,255,255,0.5)] px-3 py-2 rounded-sm"
             onMouseEnter={() => setLinkon(5)}
             onMouseLeave={() => setLinkon(0)}
