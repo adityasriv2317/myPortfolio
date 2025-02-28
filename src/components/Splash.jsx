@@ -72,10 +72,10 @@ const Splash = ({ onFinish }) => {
   return (
     show && (
       <div className="splashBase bg-transparent fixed inset-0 z-40 flex flex-col items-center font-bold text-3xl text-white overflow-hidden duration-700">
-        <div className="logoText absolute z-[43] gap-20 top-48 flex flex-col md:flex-row md:items-center">
-          <span className="txt text-center">A.</span>
-          <span className="txt text-center">B.</span>
-          <span className="txt text-center">C.</span>
+        <div className="logoText absolute z-[43] gap-16 top-72 flex flex-col md:flex-row md:items-center">
+          <span className="txt text-center">greeings.</span>
+          <span className="txt text-center">नमस्ते।</span>
+          <span className="txt text-center">¡hola!</span>
         </div>
 
         {/* background slices */}
