@@ -65,7 +65,7 @@ const Navbar = () => {
           <div className="flex space-x-4 text-xl">
             <a
               href="https://linkedin.com/in/aditya2317"
-              className="hover:bg-[rgba(255,255,255,0.3)] px-1"
+              className="hover:bg-[rgba(255,255,255,0.3)] rounded-sm px-1.5"
               target="_blank"
               rel="noopener noreferrer"
               onMouseEnter={() => setLinkon(1)}
@@ -75,7 +75,7 @@ const Navbar = () => {
             </a>
             <a
               href="https://github.com/adityasriv2317"
-              className="hover:bg-[rgba(255,255,255,0.3)] px-1"
+              className="hover:bg-[rgba(255,255,255,0.3)] px-1.5 rounded-sm"
               target="_blank"
               rel="noopener noreferrer"
               onMouseEnter={() => setLinkon(2)}
@@ -85,7 +85,7 @@ const Navbar = () => {
             </a>
             <a
               href="https://instagram.com"
-              className="hover:bg-[rgba(255,255,255,0.3)] px-1"
+              className="hover:bg-[rgba(255,255,255,0.3)] px-1.5 rounded-sm"
               target="_blank"
               rel="noopener noreferrer"
               onMouseEnter={() => setLinkon(3)}
@@ -101,7 +101,7 @@ const Navbar = () => {
         {/* navigation links for about, skills, projects and contacts*/}
         <div className="hidden md:flex uppercase text-md text-gray-400 font-mono flex-col mt-3">
           <div
-            className="flex flex-row items-center"
+            className="flex flex-row items-center w-fit"
             onClick={() => {
               setCurrentPage(0);
             }}
@@ -112,7 +112,7 @@ const Navbar = () => {
             </a>
           </div>
           <div
-            className="flex flex-row items-center"
+            className="flex flex-row items-center w-fit"
             onClick={() => {
               setCurrentPage(1);
             }}
@@ -123,7 +123,7 @@ const Navbar = () => {
             </a>
           </div>
           <div
-            className="flex flex-row items-center"
+            className="flex flex-row items-center w-fit"
             onClick={() => {
               setCurrentPage(2);
             }}
@@ -134,7 +134,7 @@ const Navbar = () => {
             </a>
           </div>
           <div
-            className="flex flex-row items-center"
+            className="flex flex-row items-center w-fit"
             onClick={() => {
               setCurrentPage(3);
             }}
