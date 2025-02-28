@@ -30,7 +30,7 @@ const App = () => {
   });
 
   return (
-    <div className="bg-[rgb(10,29,74)]">
+    <div className="bg-[rgb(13,13,55)]">
       <WebProvider>
         <BrowserRouter>
           <Cursor />

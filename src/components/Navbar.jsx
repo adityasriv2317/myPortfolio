@@ -147,7 +147,10 @@ const Navbar = () => {
         </div>
 
         {/* mail and resume */}
-        <div className="hidden md:flex flex-row items-center gap-3 text-xl mt-3">
+        <div
+          className="hidden md:flex flex-row items-center gap-1.5 text-xl mt-3"
+          style={{ fontFamily: "Poppins" }}
+        >
           <a
             href={resume}
             className="hover:bg-[rgba(255,255,255,0.5)] border border-transparent hover:border-[rgba(255,255,255,0.5)] px-3 py-2 rounded-sm"
@@ -169,7 +172,7 @@ const Navbar = () => {
 
       {/* navigation menu button*/}
       <div
-        className="md:hidden fixed top-12 right-12 flex flex-col items-center gap-2 text-xl"
+        className="md:hidden fixed top-8 right-8 flex flex-col items-center gap-2 text-xl z-[35]"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <div className="line bg-white w-[20px] h-[2px]"></div>
@@ -178,50 +181,62 @@ const Navbar = () => {
 
       {/* navigation menu items */}
       {isMenuOpen && (
-        <div className="fixed top-0 right-0 bg-black bg-opacity-70 flex flex-col items-center justify-center gap-5 text-2xl">
-          <a
-            href="#about"
-            className="hover:bg-[rgba(255,255,255,0.4)] px-3 py-2 rounded-sm"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            About
-          </a>
-          <a
-            href="#skills"
-            className="hover:bg-[rgba(255,255,255,0.4)] px-3 py-2 rounded-sm"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Skills
-          </a>
-          <a
-            href="#projects"
-            className="hover:bg-[rgba(255,255,255,0.4)] px-3 py-2 rounded-sm"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Projects
-          </a>
-          <a
-            href="#contact"
-            className="hover:bg-[rgba(255,255,255,0.4)] px-3 py-2 rounded-sm"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Contact
-          </a>
-          <a
-            href="/resume.pdf"
-            className="hover:bg-[rgba(255,255,255,0.4)] px-3 py-2 rounded-sm"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Resume
-          </a>
-          <a
-            href="mailto:adityaxia9237@gmail.com"
-            className="hover:bg-[rgba(255,255,255,0.4)] px-3 py-2 rounded-sm"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Mail Me
-          </a>
-        </div>
+        <>
+          <div className="bg-blue-950 opacity-40 fixed inset-0 z-[33] blur-lg"></div>
+          <div className="fixed flex flex-col z-[34] bg-[rgb(10,29,74)] h-full top-0 right-0 w-3/4 items-center justify-center text-white text-xl space-y-6">
+            {["About", "Skills", "Projects", "Contact"].map((item, index) => (
+              <a
+                key={index}
+                href={`#${item.toLowerCase()}`}
+                className="text-2xl font-semibold hover:scale-110 transition-transform"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item}
+              </a>
+            ))}
+
+            <div className="flex space-x-5 mt-4">
+              <a
+                href="https://linkedin.com/in/aditya2317"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-brands fa-linkedin-in text-2xl hover:text-blue-500"></i>
+              </a>
+              <a
+                href="https://github.com/adityasriv2317"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-brands fa-github text-2xl hover:text-gray-400"></i>
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-brands fa-instagram text-2xl hover:text-pink-500"></i>
+              </a>
+            </div>
+
+            <div className="mt-5 flex space-x-4">
+              <a
+                href={resume}
+                className="px-4 py-2 border border-white rounded hover:bg-white hover:text-black transition"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Resume
+              </a>
+              <a
+                href="mailto:adityaxia9237@gmail.com"
+                className="px-4 py-2 border border-white rounded hover:bg-white hover:text-black transition"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Mail Me
+              </a>
+            </div>
+          </div>
+        </>
       )}
     </div>
   );

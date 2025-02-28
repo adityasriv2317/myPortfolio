@@ -2,7 +2,7 @@
   transition: all 0.15s ease-in-out;
 }
 
-html {
+html, a, button {
   cursor: none;
 }
 
@@ -65,7 +65,7 @@ html {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 41;
+  z-index: 951;
 }
 
 /* sliding animation */
@@ -125,13 +125,6 @@ html {
   transition: transform 0.3s ease;
 }
 
-.hamburger-menu.open {
-  transform: translateY(-50%) translateX(0);
-}
-
-.hamburger-menu.closed {
-  transform: translateY(-50%) translateX(100%);
-}
 
 /* right div scrollbar styling */
 /* Scrollbar for Webkit Browsers (Chrome, Edge, Safari) */
@@ -172,7 +165,7 @@ html::-webkit-scrollbar {
   transition: all 0.03s ease;
 }
 
-body:has(a:hover) .customCursor {
+body:has(a:hover) .customCursor, body:has(button:hover) .customCursor {
   transform: scale(150%);
   background-color: white;
   border: 20px rgba(255, 0, 79, 0.5);
@@ -196,4 +189,35 @@ body:has(a:hover) .customCursor {
     transform: scale(5); /* Ripple expansion */
     opacity: 0; /* Fade out */
   }
+}
+
+/* menu animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.4s ease-in-out forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.3s ease-in-out forwards;
 }
