@@ -8,7 +8,7 @@ import Splash from "./components/Splash";
 
 // import context provider
 import { WebProvider } from "./components/WebContext";
-import Cursor from "./components/Cursor";
+import Cursor from "./assets/Cursor";
 
 const App = () => {
 

@@ -57,7 +57,7 @@ const Cursor = () => {
         <div
           key={i}
           ref={(el) => (trailsRef.current[i] = el)}
-          className="trail fixed h-4 w-4 bg-red-300 rounded-full pointer-events-none transition-all duration-700 ease-out filter blur-md"
+          className="max-md:hidden trail fixed h-4 w-4 bg-red-300 rounded-full pointer-events-none transition-all duration-700 ease-out filter blur-md"
           style={{
             transition: `transform ${0.1 * (i + 1)}s ease-out, opacity 0.6s`,
           }}
