@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import Logo from "./Logo";
 
-import useWebContext from "../WebContext";
+import useWebContext from "./WebContext";
 
 // navbar component
 const Navbar = () => {
