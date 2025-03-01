@@ -5,6 +5,8 @@ import Splash from "./Splash";
 import PieChart from "../assets/PieChart";
 import Button from "../assets/Button";
 
+import maintain from "/maintain.png";
+
 const Home = () => {
   const [loading, setLoading] = useState(true);
 
@@ -21,6 +23,10 @@ const Home = () => {
           Home
         </h1>
         <p className="text-center my-5">Welcome to the home page</p>
+        <div className="flex md:flex-row text-4xl bg-[rgba(220,119,119,0.4)] mb-4 rounded-xl items-center">
+          <img src={maintain} alt="maintain" className="w-1/2 h-auto" />
+          <h2>Site Under maintenance</h2>
+        </div>
         <About />
       </div>
     </div>
