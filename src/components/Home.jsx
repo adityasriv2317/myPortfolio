@@ -23,7 +23,7 @@ const Home = () => {
           Home
         </h1>
         <p className="text-center my-5">Welcome to the home page</p>
-        <div className="flex md:flex-row text-4xl bg-[rgba(220,119,119,0.4)] mb-4 rounded-xl items-center">
+        <div className="flex flex-col md:flex-row text-2xl md:text-4xl bg-[rgba(220,119,119,0.4)] mb-4 rounded-xl items-center">
           <img src={maintain} alt="maintain" className="w-1/2 h-auto" />
           <h2>Site Under maintenance</h2>
         </div>
