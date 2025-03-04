@@ -41,7 +41,7 @@ const Logo = () => {
 
   return (
     <a
-      className="flex logo text-[rgba(255,255,255,0.8)] w-fit hover:text-white hover:[text-shadow:0px_0px_7px_rgba(255,255,255,0.4)] items-center text-3xl text-center"
+      className="flex logo text-[rgba(255,255,255,1] w-fit hover:text-white hover:[text-shadow:0px_0px_7px_rgba(255,255,255,0.4)] items-center text-3xl text-center"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={() => window.scrollTo(top)}

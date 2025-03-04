@@ -94,7 +94,7 @@ const Navbar = () => {
               <i className="fa-brands fa-instagram"></i>
             </a>
           </div>
-          <div className="line bg-white w-full mx-3 h-[2px] my-auto"></div>
+          <div className="line bg-white w-full mx-3 rounded-sm h-[6px] my-auto"></div>
         </div>
       </div>
       <div>
