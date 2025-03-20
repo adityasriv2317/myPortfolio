@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import Logo from "./Logo";
 
 import useWebContext from "./WebContext";
 import resume from "../assets/AdityaResume.pdf";
+import Button from "../assets/Button";
 
 // navbar component
 const Navbar = () => {
@@ -148,25 +149,22 @@ const Navbar = () => {
 
         {/* mail and resume */}
         <div
-          className="hidden md:flex flex-row items-center gap-1.5 text-xl mt-3"
+          className="hidden md:flex flex-row items-center gap-2 text-xl mt-3"
           style={{ fontFamily: "Poppins" }}
         >
-          <a
-            href={resume}
-            className="hover:bg-[rgba(255,255,255,0.5)] border border-transparent hover:border-[rgba(255,255,255,0.5)] px-3 py-2 rounded-sm"
-            onMouseEnter={() => setLinkon(5)}
-            onMouseLeave={() => setLinkon(0)}
-          >
-            <i className="fa-solid fa-file"></i> Resume
-          </a>
-          <a
-            href="mailto:adityaxia9237@gmail.com"
-            className="border border-dashed hover:bg-[rgba(255,255,255,0.4)] px-3 py-2 rounded-sm"
-            onMouseEnter={() => setLinkon(4)}
-            onMouseLeave={() => setLinkon(0)}
-          >
-            <i className="fa-solid fa-envelope"></i> Mail Me
-          </a>
+          <Button
+            url={"mailto:adityaxia9237@gmail.com"}
+            data="Mail Me"
+            stl={"border border-white border-dashed rounded-xs hover:bg-blue-500 mr-2 px-4 [text-shadow:0px_0px_7px_rgba(255,255,255,0.3)] hover:text-black transition"}
+            icon={<i className="fa-solid fa-envelope"></i>}
+          />
+
+          <Button
+            data="Resume"
+            url={resume}
+            icon={<i className="fa-solid fa-file"></i>}
+            stl={"[text-shadow:0px_0px_5px_rgba(255,255,255,0.5)]"}
+          />
         </div>
       </div>
 

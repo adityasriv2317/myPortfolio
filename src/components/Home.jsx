@@ -6,6 +6,8 @@ import PieChart from "../assets/PieChart";
 import Button from "../assets/Button";
 
 import maintain from "/maintain.png";
+import AboutMe from "./AboutMe";
+import MySkills from "./MySkills";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -18,12 +20,9 @@ const Home = () => {
       </div>
 
       {/* main content*/}
-      <div className="right w-2/3 not-md:w-full md:px-20 py-2 max-h-max overflow-y-scroll">
-        <h1 className="text-3xl font-bold text-[#ff004f] [text-shadow:0px_0px_7px_rgba(255,0,60,0.8)] text-center mt-10">
-          Home
-        </h1>
-        <p className="text-center my-5">Welcome to the home page</p>
-        <About />
+      <div className="right w-2/3 md:ml-14 not-md:w-full md:px-20 pt-12 bg-gray-900 max-h-max overflow-y-scroll overflow-x-visible">
+        <AboutMe />
+        <MySkills />
       </div>
     </div>
   );
