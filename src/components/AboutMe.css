@@ -1,0 +1,91 @@
+/* AboutMe.css */
+
+/* Section Animations */
+.section-title {
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  .section-text {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Skill Card Styling */
+  .skill-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Icon Animations */
+  .icon-container {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .skill-card:hover .icon-container {
+    transform: rotate(10deg) scale(1.1);
+  }
+  
+  /* Interactive Meters */
+  .meter {
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .meter-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #2196F3);
+    transition: width 1s ease-in-out;
+  }
+  
+  /* Graph Animations */
+  .graph-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    height: 150px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .graph-bar {
+    width: 30px;
+    background: linear-gradient(to top, #ff9800, #ff5722);
+    border-radius: 5px;
+    transition: height 1s ease-in-out;
+  }
+  
+  /* Keyframes for animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

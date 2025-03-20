@@ -47,7 +47,7 @@ const Logo = () => {
       onClick={() => window.scrollTo(top)}
     >
       <div className="font-light">&lt;</div>
-      <div className="name hover:font-medium font-light duration-1000 transition-all">
+      <div className="name hover:font-medium md:text-4xl font-light duration-1000 transition-all">
         {displayName.slice(0, 6)}
         <span className="font-light [text-shadow:0px_0px_7px_rgba(255,255,255,0.8)]">
           {displayName.slice(6)}
