@@ -1,5 +1,6 @@
 * {
   transition: all 0.15s ease-in-out;
+  scroll-behavior: smooth;
 }
 
 html, a, button {

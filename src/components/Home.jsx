@@ -1,11 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import Navbar from "./Navbar";
-import About from "./About";
 import Splash from "./Splash";
-import PieChart from "../assets/PieChart";
-import Button from "../assets/Button";
-
-import maintain from "/maintain.png";
 import AboutMe from "./AboutMe";
 import MySkills from "./MySkills";
 

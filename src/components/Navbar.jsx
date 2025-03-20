@@ -59,7 +59,7 @@ const Navbar = () => {
     <div className="h-full flex flex-col justify-between text-white mb-2">
       {/* logo */}
       <div>
-        <Logo />
+        <Logo onClick={() => {}} />
 
         {/* socials */}
         <div className="hidden md:flex flex-row mt-3 ml-1">
@@ -155,7 +155,9 @@ const Navbar = () => {
           <Button
             url={"mailto:adityaxia9237@gmail.com"}
             data="Mail Me"
-            stl={"border border-white border-dashed rounded-xs hover:bg-blue-500 mr-2 px-4 [text-shadow:0px_0px_7px_rgba(255,255,255,0.3)] hover:text-black transition"}
+            stl={
+              "border border-white border-dashed rounded-xs hover:bg-blue-500 mr-2 px-4 [text-shadow:0px_0px_7px_rgba(255,255,255,0.3)] hover:text-black transition"
+            }
             icon={<i className="fa-solid fa-envelope"></i>}
           />
 

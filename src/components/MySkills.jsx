@@ -94,7 +94,7 @@ const MySkills = () => {
   const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" });
 
   return (
-    <div ref={ref} className="py-8 text-center overflow-visible">
+    <div ref={ref} id="skills" className="py-8 text-center overflow-visible">
       <motion.h2
         className="text-6xl md:py-14 font-bold font-[gresbik] section-title"
         initial={{ opacity: 0, y: -20 }}
@@ -142,7 +142,7 @@ const MySkills = () => {
       </p>
       <div className="flex justify-center gap-4 mt-2">
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/adityasriv2317"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-blue-400 hover:text-blue-600"
@@ -150,7 +150,7 @@ const MySkills = () => {
           <FaGithub /> GitHub <FaExternalLinkAlt size={12} />
         </a>
         <a
-          href="https://linkedin.com/in/yourprofile"
+          href="https://linkedin.com/in/aditya2317"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 text-blue-400 hover:text-blue-600"

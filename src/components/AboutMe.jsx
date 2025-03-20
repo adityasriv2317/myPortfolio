@@ -1,10 +1,9 @@
-import React from "react";
 import "./AboutMe.css";
 import { motion } from "framer-motion";
 
 const AboutMe = () => {
   return (
-    <section className="not-md:p-4 text-center h-screen text-white">
+    <section id="about" className="not-md:p-4 text-center h-screen text-white">
       {/* Section Title with animation */}
       <motion.h2
         className="text-6xl md:py-14 font-bold font-[gresbik] section-title"
