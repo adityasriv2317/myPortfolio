@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Logo from "./Logo";
+import { motion } from "framer-motion";
 
 import useWebContext from "./WebContext";
 import resume from "../assets/AdityaResume.pdf";
@@ -180,10 +181,29 @@ const Navbar = () => {
       </div>
 
       {/* navigation menu items */}
-      {isMenuOpen && (
+      {
         <>
-          <div className="bg-blue-950 opacity-40 fixed inset-0 z-[33] blur-lg"></div>
-          <div className="fixed flex flex-col z-[34] bg-[rgb(10,29,74)] h-full top-0 right-0 w-3/4 items-center justify-center text-white text-xl space-y-6">
+          {/* <motion.div
+            className="fixed inset-0 bg-blue-950 opacity-10 blur-md z-[33]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isMenuOpen ? 0.75 : 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            onClick={() => setIsMenuOpen(false)} // Click outside to close
+          ></motion.div> */}
+
+          <div
+            className={`fixed inset-0 bg-blue-950/20 backdrop-blur-sm transition-opacity ${
+              isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+            }`}
+            onClick={() => setIsMenuOpen(false)}
+          ></div>
+
+          {/* Sliding Navbar with Frosted Glass Effect */}
+          <div
+            className={`fixed top-0 right-0 h-full w-3/4 bg-[rgb(10,29,74)] bg-opacity-50 backdrop-blur-lg shadow-lg z-[34] flex flex-col items-center justify-center text-white text-xl space-y-6 ${
+              isMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
+          >
             {["About", "Skills", "Projects", "Contact"].map((item, index) => (
               <a
                 key={index}
@@ -195,6 +215,7 @@ const Navbar = () => {
               </a>
             ))}
 
+            {/* Social Links */}
             <div className="flex space-x-5 mt-4">
               <a
                 href="https://linkedin.com/in/aditya2317"
@@ -219,9 +240,10 @@ const Navbar = () => {
               </a>
             </div>
 
+            {/* Resume & Contact Buttons */}
             <div className="mt-5 flex space-x-4">
               <a
-                href={resume}
+                href="/resume.pdf"
                 className="px-4 py-2 border border-white rounded hover:bg-white hover:text-black transition"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -237,7 +259,7 @@ const Navbar = () => {
             </div>
           </div>
         </>
-      )}
+      }
     </div>
   );
 };

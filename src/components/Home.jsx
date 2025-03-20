@@ -8,9 +8,9 @@ const Home = () => {
   const [loading, setLoading] = useState(true);
 
   return (
-    <div className="flex flex-col md:flex-row h-screen text-white px-8 md:px-24 py-2 md:py-0">
+    <div className="flex flex-col md:flex-row h-screen text-white px-1 md:px-24 py-2 md:py-0">
       {loading && <Splash onFinish={() => setLoading(false)} />}
-      <div className="left md:w-1/3 not-md:border-b border-gray-300 max-h-max not-md:py-2 md:py-24">
+      <div className="left md:w-1/3 not-md:border-b border-gray-300 max-h-max not-md:mx-8 not-md:py-2 md:py-24">
         <Navbar />
       </div>
 
